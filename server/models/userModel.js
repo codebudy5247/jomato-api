@@ -1,6 +1,14 @@
 const mongoose = require('mongoose')
 
-
+const deliveryInfo = {
+    street: String,
+    locality: String,
+    aptName: String,
+    zip: String,
+    phoneNo: Number,
+    lat: Number,
+    lng: Number,
+};
 const userSchema = mongoose.Schema(
     {
         name: {
@@ -17,11 +25,11 @@ const userSchema = mongoose.Schema(
             type: String,
             required: true,
         },
-        PhoneNumber: {
-            type: Number,
-            required: true,
-            unique: true,
+        formattedAddress: {
+            type: String,
         },
+        address: deliveryInfo,
+        //Account: { type: mongoose.Types.ObjectId, required: true, ref: "Account" },
         Role: {
             type: String,
             enum: ["user", "admin", "seller"],
