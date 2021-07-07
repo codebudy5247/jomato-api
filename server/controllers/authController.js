@@ -207,7 +207,7 @@ exports.signin = async (req, res) => {
     );
 
     res.status(200).json({
-      result: oldUser,
+      data: oldUser,
       token
     });
   } catch (err) {
