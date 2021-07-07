@@ -1,5 +1,5 @@
-# Food-Recipe App
-> Full stack Mern Application
+# Jomato-APIs
+> APIs for food delivery app 
 
 ## Usage
 
@@ -17,12 +17,5 @@ JWT_SECRET=
 ```bash
 #root dir
 npm install
-
-cd client
-npm install
-
-#Run both Client and Server
-#root dir
-npm run dev
 
 ```
